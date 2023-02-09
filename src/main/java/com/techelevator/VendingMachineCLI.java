@@ -27,9 +27,16 @@ public class VendingMachineCLI {
 			}
 		} catch (FileNotFoundException e) {
 		}
-		for (Map.Entry<Integer, Item> element : inventory.entrySet()) {
-			System.out.println(element.getValue().getName());
-		}
+
+		Money money = new Money();
+
+		MainMenu mainMenu = new MainMenu();
+		mainMenu.mainMenu(inventory);
+
+		PurchaseMenu purchaseMenu = new PurchaseMenu();
+		purchaseMenu.purchaseMenu(inventory);
+
+
 
 	}
 
