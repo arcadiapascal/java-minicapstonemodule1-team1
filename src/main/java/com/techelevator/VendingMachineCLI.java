@@ -18,7 +18,6 @@ public class VendingMachineCLI {
 		try (Scanner textInput = new Scanner(inventoryFile)) {
 			while (textInput.hasNextLine()) {
 				count++;
-
 				String lineOfInput = textInput.nextLine();
 				String[] itemInfoArray = lineOfInput.split("\\|");
 				BigDecimal stringToDec = new BigDecimal(itemInfoArray[2]);
@@ -27,14 +26,13 @@ public class VendingMachineCLI {
 			}
 		} catch (FileNotFoundException e) {
 		}
-
 		Money money = new Money();
 
 		MainMenu mainMenu = new MainMenu();
 		mainMenu.mainMenu(inventory);
 
-		PurchaseMenu purchaseMenu = new PurchaseMenu();
-		purchaseMenu.purchaseMenu(inventory);
+
+
 
 
 
