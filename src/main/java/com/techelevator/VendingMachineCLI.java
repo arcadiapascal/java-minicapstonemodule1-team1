@@ -12,7 +12,7 @@ public class VendingMachineCLI {
 
 	public static void main(String[] args) {
 
-
+//	Reads inventory file, Makes map
 		File inventoryFile = new File("vendingmachine.csv");
 		int count = 0;
 		Map<Integer, Item> inventory = new HashMap<Integer, Item>();
@@ -27,9 +27,12 @@ public class VendingMachineCLI {
 			}
 		} catch (FileNotFoundException e) {
 		}
+
+//	Makes new money object
 		Money money = new Money();
 
-			MainMenu mainMenu = new MainMenu();
+//	Makes new main menu object & calls main menu method
+		MainMenu mainMenu = new MainMenu();
 			mainMenu.mainMenu(inventory);
 
 
