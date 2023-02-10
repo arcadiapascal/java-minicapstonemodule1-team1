@@ -14,6 +14,9 @@ public class MainMenu {
         Scanner userInput = new Scanner(System.in);
         boolean validEntry = false;
         while (validEntry == false) {
+            System.out.println();
+            System.out.println("Welcome to the Vendo-Matic 800 by CuteCo, Inc.");
+            System.out.println();
             System.out.println("(1) Display Vending Machine Items");
             System.out.println("(2) Purchase");
             System.out.println("(3) Exit");
