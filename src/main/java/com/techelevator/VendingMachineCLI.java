@@ -2,6 +2,7 @@ package com.techelevator;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
@@ -28,9 +29,8 @@ public class VendingMachineCLI {
 		}
 		Money money = new Money();
 
-		MainMenu mainMenu = new MainMenu();
-		mainMenu.mainMenu(inventory);
-
+			MainMenu mainMenu = new MainMenu();
+			mainMenu.mainMenu(inventory);
 
 
 

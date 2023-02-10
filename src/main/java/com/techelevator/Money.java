@@ -17,12 +17,17 @@ public class Money {
     }
 
 
+
+
     public void feedMoney(BigDecimal dollars) {
-        balance=balance.add(dollars);
+
+            balance=balance.add(dollars);
 
     }
 
+
     public Item purchase(String userInput, Map<Integer, Item> inventoryMap) {
+
         for (Map.Entry<Integer, Item> element : inventoryMap.entrySet()) {
             if (userInput.toUpperCase().equals(element.getValue().getSlot()) && balance.compareTo(element.getValue().getPrice()) != -1) {
                 if(element.getValue().getQuantity()==0){
@@ -32,7 +37,6 @@ public class Money {
                     balance=balance.subtract(element.getValue().getPrice());
                     Item selectedItem = element.getValue();
                     element.getValue().setQuantity(element.getValue().getQuantity()-1);
-                    System.out.println(element.getValue().getQuantity());
                     return selectedItem;
                 }
             }
@@ -47,6 +51,7 @@ public class Money {
         int dimeCount=0;
         int nickelCount=0;
 
+
         while(balance.compareTo(quarter) != -1){
             quarterCount++;
             balance=balance.subtract(quarter);
@@ -59,7 +64,8 @@ public class Money {
             nickelCount++;
             balance=balance.subtract(nickel);
         }
-        return "Change Due: "+ "\nQuarters: "+ quarterCount+"\n Dimes: "+ dimeCount+ "\n Nickels: " + nickelCount ;
+        return "Change Due: "+ "\nQuarters: "+ quarterCount+"\nDimes: "+ dimeCount+ "\nNickels: " + nickelCount ;
 
     }
+
 }

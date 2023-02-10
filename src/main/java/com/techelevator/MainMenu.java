@@ -9,6 +9,7 @@ public class MainMenu {
     public MainMenu() {
     }
 
+
     public void mainMenu(Map<Integer, Item> inventoryMap) {
         Scanner userInput = new Scanner(System.in);
         boolean validEntry = false;
